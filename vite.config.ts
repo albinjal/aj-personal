@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/aj-personal/", // Set base path for GitHub Pages
+  base: "/", // Set base path for GitHub Pages
   server: {
     host: "::",
     port: 8080,
