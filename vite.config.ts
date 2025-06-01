@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // Set for custom domain jaldevik.com
+  base: "/aj-personal/",
   server: {
     host: "::",
     port: 8080,
