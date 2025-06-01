@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // Set base path for GitHub Pages
+  base: "/", // Set for custom domain jaldevik.com
   server: {
     host: "::",
     port: 8080,
@@ -13,6 +13,19 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast'],
+        },
+      },
     },
   },
 });
